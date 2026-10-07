@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Участки под производство и склад от 25 соток - Верхняя Подстепновка, Самарская область</title>
+<meta name="description" content="14 участков промназначения на интерактивной карте. Зона П1, газ, до 630 кВА, асфальт, КПП. 250 000 ₽ за сотку, скидка до 10,8%. Продаёт собственник." />
+<meta property="og:title" content="Участки под производство и склад - Верхняя Подстепновка" />
+<meta property="og:description" content="Выберите участок на карте. 14 участков, 7,55 га, зона П1. От 6,25 млн ₽." />
+<meta property="og:image" content="satellite.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet" />
+<script src="config.js"></script>
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+html,body{overflow-x:hidden}
+body{margin:0;background:#f3f1ea;color:#16201b;font-family:'Golos Text',system-ui,sans-serif;-webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums}
+img{display:block;max-width:100%}
+a{color:#16201b;text-decoration:none}
+a:hover{color:#e8590c}
+h1,h2,h3{font-family:Unbounded,sans-serif;font-weight:500;margin:0;letter-spacing:-.01em}
+h2{font-size:clamp(28px,3.6vw,48px);line-height:1.08;text-wrap:balance}
+p{text-wrap:pretty;margin:0}
+section[id]{scroll-margin-top:72px}
+.ico{width:18px;height:18px;flex:none}
+.wrap{padding-left:clamp(16px,4vw,56px);padding-right:clamp(16px,4vw,56px)}
+
+header{position:sticky;top:0;z-index:50;height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px;background:#16201b;color:#f3f1ea}
+.logo{display:flex;align-items:center;gap:12px;color:#f3f1ea;min-width:0}
+.logo-mark{width:36px;height:36px;background:#e8590c;display:grid;grid-template-columns:1fr 1fr;gap:3px;padding:7px;flex:none}
+.logo-mark i{background:#16201b}
+.logo-mark i:nth-child(4){background:#f3f1ea}
+.logo-t{display:flex;flex-direction:column;line-height:1.2;min-width:0}
+.logo-t b{font-weight:600;font-size:15px;white-space:nowrap}
+.logo-t span{font-size:12px;color:#a9b3ad;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+header nav{display:flex;gap:4px;font-size:14px}
+header nav a{color:#d9ddd8;padding:10px 12px}
+header nav a:hover{color:#ff8a4c}
+.h-act{display:flex;align-items:center;gap:8px}
+.hm{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:42px;padding:0 14px;border:1px solid #3b4a42;color:#f3f1ea;font-size:14px;font-weight:500;white-space:nowrap}
+.hm:hover{border-color:#f3f1ea;color:#f3f1ea}
+.htel{display:inline-flex;align-items:center;gap:8px;height:42px;padding:0 16px;background:#e8590c;color:#fff;font-weight:600;font-size:15px;white-space:nowrap}
+.htel:hover{background:#ff6d1f;color:#fff}
+.hreq{height:42px;padding:0 16px;background:#f3f1ea;color:#16201b;border:none;font:inherit;font-size:15px;font-weight:600;cursor:pointer;white-space:nowrap}
+.hreq:hover{background:#fff}
+@media (max-width:1180px){.hreq{display:none}}
+dialog.rq,dialog.mx{overflow-y:auto;overscroll-behavior:contain}
+@media (max-height:640px){dialog.rq .card{padding:18px}dialog.rq .fields{gap:8px}dialog.rq input[type=text],dialog.rq input[type=tel]{height:46px}dialog.rq .btn{min-height:48px}}
+dialog.rq{border:none;padding:0;width:min(460px,calc(100vw - 24px));max-height:calc(100vh - 24px);box-shadow:0 30px 80px -20px rgba(0,0,0,.5)}
+dialog.rq::backdrop{background:rgba(22,32,27,.6)}
+dialog.rq .card{border:none;position:relative}
+@media (max-width:1200px){header nav{display:none}}
+@media (max-width:760px){.hm,.logo-t span{display:none}.htel{padding:0 12px}}
+@media (max-width:400px){.htel span{display:none}}
+
+.hero{display:grid;grid-template-columns:minmax(340px,420px) minmax(0,1fr);height:calc(100vh - 64px);min-height:660px;max-height:980px;border-bottom:1px solid #d8d3c4}
+.panel{background:#fff;border-right:1px solid #d8d3c4;display:flex;flex-direction:column;overflow-y:auto}
+.p-top{padding:28px 28px 20px}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#2f6b3a;margin-bottom:16px}
+.kicker:before{content:"";width:8px;height:8px;border-radius:50%;background:#3fa05a;box-shadow:0 0 0 4px rgba(63,160,90,.18)}
+h1{font-size:clamp(26px,2.2vw,32px);line-height:1.12;margin-bottom:14px}
+h1 em{font-style:normal;color:#e8590c}
+.lead{font-size:15px;line-height:1.55;color:#4a554f}
+.p-sel{padding:20px 28px;border-top:1px solid #ebe7dc;background:#faf9f5;flex:1}
+.ps-h{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:12px}
+.ps-h b{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#6b746f}
+.ps-clear{background:none;border:none;padding:0;font:inherit;font-size:13px;color:#6b746f;text-decoration:underline;cursor:pointer}
+.ps-empty{font-size:15px;line-height:1.55;color:#4a554f;display:flex;gap:12px;align-items:flex-start}
+.ps-empty i{flex:none;width:28px;height:28px;border:2px dashed #2f6b3a;background:#e2ecd8}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.chip{display:inline-flex;align-items:center;gap:6px;height:34px;padding:0 6px 0 12px;background:#e8590c;color:#fff;font-size:14px;font-weight:500;border:none;cursor:pointer;font-family:inherit}
+.chip span{width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:16px;line-height:1}
+.chip:hover{background:#c84a08}
+.tot{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.tot-sum{font-family:Unbounded,sans-serif;font-size:30px;font-weight:500;line-height:1}
+.tot-old{font-size:14px;color:#6b746f;text-decoration:line-through}
+.tot-meta{font-size:14px;color:#4a554f;margin-top:6px}
+.bar{position:relative;height:8px;background:#e6e2d6;margin:20px 0 6px}
+.bar-f{position:absolute;left:0;top:0;bottom:0;background:#e8590c;transition:width .3s}
+.bar-t{position:absolute;top:-4px;width:2px;height:16px;background:#16201b}
+.bar-l{position:relative;height:16px;font-size:11px;color:#6b746f}
+.bar-l span{position:absolute;transform:translateX(-50%);white-space:nowrap}
+.bar-hint{font-size:14px;color:#16201b;font-weight:500;margin-top:8px}
+.p-form{padding:20px 28px 28px;border-top:1px solid #ebe7dc;background:#fff}
+.fields{display:flex;flex-direction:column;gap:12px}
+.ff{display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;color:#4a554f}
+input[type=text],input[type=tel],select{font-family:inherit;font-size:16px;height:52px;padding:0 16px;border:1.5px solid #cfc9b8;background:#fff;color:#16201b;width:100%;border-radius:0;-webkit-appearance:none;appearance:none}
+select{background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%2316201b' stroke-width='1.6'/%3E%3C/svg%3E") no-repeat right 16px center;padding-right:40px}
+input:focus,select:focus{outline:none;border-color:#16201b}
+.seg{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:4px;background:#efece3;padding:4px}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg label{display:flex;align-items:center;justify-content:center;height:40px;font-size:14px;font-weight:500;color:#4a554f;cursor:pointer}
+.seg input:checked+label{background:#fff;color:#16201b;box-shadow:0 1px 3px rgba(0,0,0,.12)}
+.seg input:focus-visible+label{outline:2px solid #e8590c}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:12px;line-height:1.45;color:#6b746f}
+.consent input{width:18px;height:18px;margin:0;flex:none;accent-color:#16201b}
+.consent a{text-decoration:underline;color:#4a554f}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 24px;font-family:inherit;font-size:16px;font-weight:600;border:none;cursor:pointer;transition:background .15s}
+.btn-o{background:#e8590c;color:#fff}
+.btn-o:hover{background:#c84a08;color:#fff}
+.btn-d{background:#16201b;color:#fff}
+.btn-d:hover{background:#2f6b3a;color:#fff}
+.btn:disabled{opacity:.6;cursor:default}
+.form-msg{font-size:14px;line-height:1.5;color:#b3261e}
+.form-msg:empty{display:none}
+.done{display:none;flex-direction:column;gap:10px}
+.done h3{font-size:22px}
+.done p{font-size:15px;line-height:1.55;color:#4a554f}
+form.sent .fields{display:none}
+form.sent .done{display:flex}
+.p-or{display:flex;gap:8px;margin-top:4px}
+.p-or a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:8px;height:44px;border:1.5px solid #16201b;font-size:14px;font-weight:600}
+.p-or a:hover{background:#16201b;color:#fff}
+
+.map{position:relative;overflow:hidden;min-width:0;min-height:0;background:#e9e5d8;background-image:linear-gradient(#ddd8c8 1px,transparent 1px),linear-gradient(90deg,#ddd8c8 1px,transparent 1px);background-size:40px 40px;display:flex;flex-direction:column}
+.map-top{position:relative;padding:16px 16px 0;display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;z-index:2;flex:none}
+.map-badge{background:#16201b;color:#f3f1ea;padding:10px 14px;font-size:14px;line-height:1.35;pointer-events:auto}
+.map-badge b{font-family:Unbounded,sans-serif;font-weight:500;font-size:16px;display:block}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;background:rgba(255,255,255,.92);padding:10px 14px;font-size:13px;color:#4a554f;pointer-events:auto}
+.legend span{display:inline-flex;align-items:center;gap:7px}
+.legend i{width:14px;height:14px;border:1.5px solid #2f6b3a;background:#d7e6c9}
+.legend i.s{background:#e8590c;border-color:#e8590c}
+.legend i.r{background:#e3dfd4;border-color:#a39d8c}
+.legend i.x{background:#c9c3b3;border-color:#8c8676}
+.map-svg{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;padding:20px clamp(12px,3vw,40px) 48px}
+.map-svg svg{width:100%;height:100%;max-height:100%;display:block;overflow:visible}
+.map-hint{position:absolute;left:16px;bottom:14px;font-size:13px;color:#4a554f;z-index:2}
+.lp{cursor:pointer}
+.lp path{fill:#d7e6c9;stroke:#2f6b3a;stroke-width:2;transition:fill .15s}
+.lp:hover path{fill:#9fca8a}
+.lp text{fill:#16201b;pointer-events:none}
+.lp.on path{fill:#e8590c;stroke:#a83e04}
+.lp.on text{fill:#fff}
+.lp:focus{outline:none}
+.lp:focus-visible path{stroke:#16201b;stroke-width:4}
+.ln path{fill:#e3dfd4;stroke:#a39d8c;stroke-width:1.5}
+.ln text{fill:#7a7466}
+.lx path{fill:#c9c3b3;stroke:#8c8676;stroke-width:1.5}
+.lx text{fill:#5e594d}
+.views{display:flex;background:#16201b;padding:3px;gap:3px;pointer-events:auto}
+.views button{height:44px;padding:0 16px;border:none;background:none;color:#a9b3ad;font:inherit;font-size:14px;font-weight:600;cursor:pointer}
+.views button.on{background:#f3f1ea;color:#16201b}
+.map-l{display:flex;flex-direction:column;gap:12px}
+.list{flex:1;min-height:0;overflow:auto;margin:16px 16px 48px;background:#fff;border:1px solid #d8d3c4}
+.list[hidden],.map-svg[hidden]{display:none}
+.list table{width:100%;border-collapse:collapse;font-size:15px}
+.list th{position:sticky;top:0;background:#16201b;color:#f3f1ea;text-align:left;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:0 14px;height:44px;white-space:nowrap}
+.list th button{background:none;border:none;color:inherit;font:inherit;letter-spacing:inherit;text-transform:inherit;cursor:pointer;padding:0;display:inline-flex;gap:6px;align-items:center}
+.list th button:hover{color:#ff8a4c}
+.list td{padding:0 14px;height:56px;border-bottom:1px solid #ebe7dc;white-space:nowrap}
+.list tr.on td{background:#fff1e8}
+.list td b{font-weight:600}
+.list .t1{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;background:#16201b;color:#f3f1ea;padding:3px 7px}
+.list .t2{font-size:13px;color:#6b746f}
+.add{min-width:44px;height:40px;padding:0 12px;border:1.5px solid #2f6b3a;background:#d7e6c9;color:#16201b;font:inherit;font-size:14px;font-weight:600;cursor:pointer}
+.add:hover{background:#9fca8a}
+tr.on .add{background:#e8590c;border-color:#e8590c;color:#fff}
+@media (max-width:560px){.list .c-line{display:none}.list td,.list th{padding:0 10px}}
+dialog.mx{border:none;padding:0;max-width:min(420px,calc(100vw - 32px));box-shadow:0 30px 80px -20px rgba(0,0,0,.5)}
+dialog.mx::backdrop{background:rgba(22,32,27,.6)}
+.mx-in{padding:28px;display:flex;flex-direction:column;gap:14px}
+.mx-in h3{font-size:22px}
+.mx-in p{font-size:15px;line-height:1.55;color:#4a554f}
+.mx-tel{font-family:Unbounded,sans-serif;font-size:24px}
+.mx-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.mx-x{position:absolute;top:8px;right:8px;width:44px;height:44px;border:none;background:none;font-size:24px;cursor:pointer;color:#4a554f}
+.tip{position:absolute;z-index:5;pointer-events:none;background:#16201b;color:#fff;padding:10px 14px;font-size:14px;line-height:1.4;white-space:nowrap;transform:translate(-50%,calc(-100% - 14px));opacity:0;transition:opacity .1s}
+.tip b{font-size:16px}
+.tip.show{opacity:1}
+
+@media (max-width:1180px){
+  .hero{display:flex;flex-direction:column;height:auto;max-height:none;min-height:0}
+  .panel{display:contents}
+  .p-top{order:1;background:#fff}
+  .map{order:2}
+  .p-sel{order:3}
+  .p-form{order:4}
+  .list{max-height:70vh;margin:12px 12px 40px}
+  .map-svg{padding:16px 12px 44px;height:auto}
+  .map-svg svg{height:auto}
+  .p-top,.p-sel,.p-form{padding-left:16px;padding-right:16px}
+}
+
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));background:#16201b;color:#f3f1ea}
+.fact{padding:26px clamp(16px,2.4vw,28px);border-right:1px solid #2c3832;display:flex;flex-direction:column;gap:6px}
+.fact b{font-family:Unbounded,sans-serif;font-weight:500;font-size:clamp(20px,1.8vw,26px);line-height:1.15;color:#fff}
+.fact span{font-size:14px;line-height:1.45;color:#a9b3ad}
+
+.sec{padding-top:clamp(56px,7vw,112px);padding-bottom:clamp(56px,7vw,112px)}
+.sh{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:16px 48px;align-items:end;margin-bottom:clamp(28px,4vw,48px)}
+.sh p{font-size:17px;line-height:1.6;color:#4a554f;max-width:56ch}
+.eb{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#e8590c;margin-bottom:14px}
+
+.tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:12px}
+.tier{background:#fff;border:1px solid #d8d3c4;padding:28px;display:flex;flex-direction:column;gap:8px}
+.tier-p{font-family:Unbounded,sans-serif;font-size:clamp(40px,4.4vw,60px);line-height:1;font-weight:500}
+.tier-l{font-size:17px;font-weight:600}
+.tier-x{font-size:15px;line-height:1.5;color:#4a554f}
+.tier.base{background:#16201b;color:#fff;border-color:#16201b}
+.tier.base .tier-x{color:#a9b3ad}
+.tier.top{background:#e8590c;color:#fff;border-color:#e8590c}
+.tier.top .tier-x{color:#ffe3d3}
+.example{margin-top:12px;background:#fff;border:1px solid #d8d3c4;padding:22px 28px;display:flex;flex-wrap:wrap;gap:10px 28px;align-items:baseline;justify-content:space-between}
+.example p{font-size:16px;line-height:1.55;color:#4a554f}
+.example b{color:#16201b}
+.example-sum{font-family:Unbounded,sans-serif;font-size:24px;white-space:nowrap}
+.fine{margin-top:14px;font-size:13px;line-height:1.6;color:#6b746f}
+
+.photos{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:12px}
+.ph{margin:0;position:relative;overflow:hidden;background:#d8d3c4}
+.ph img{width:100%;height:100%;object-fit:cover}
+.ph figcaption{position:absolute;left:0;bottom:0;background:#16201b;color:#fff;font-size:14px;padding:8px 12px}
+.ph-1{grid-column:span 7;aspect-ratio:16/10}
+.ph-2{grid-column:span 5;aspect-ratio:auto}
+.ph-3,.ph-4,.ph-5{grid-column:span 4;aspect-ratio:4/3}
+@media (max-width:760px){.ph-1,.ph-2,.ph-3,.ph-4,.ph-5{grid-column:span 12;aspect-ratio:4/3}}
+
+.dark{background:#16201b;color:#f3f1ea}
+.dark .sh p{color:#a9b3ad}
+.uses{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:1px;background:#2c3832;border:1px solid #2c3832;margin-bottom:40px}
+.use{background:#16201b;padding:28px;display:flex;flex-direction:column;gap:10px}
+.use-n{font-size:13px;color:#e8590c;font-weight:600}
+.use-t{font-family:Unbounded,sans-serif;font-size:22px;font-weight:500}
+.use-x{font-size:15px;line-height:1.55;color:#a9b3ad}
+.specs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:0 48px}
+.sp{display:grid;grid-template-columns:minmax(0,170px) minmax(0,1fr);gap:4px 20px;padding:16px 0;border-bottom:1px solid #2c3832}
+.sp-l{font-size:13px;color:#8b968f}
+.sp-v{font-size:15px;line-height:1.5}
+@media (max-width:520px){.sp{grid-template-columns:1fr}}
+
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:12px}
+.step{background:#fff;border:1px solid #d8d3c4;padding:26px;display:flex;flex-direction:column;gap:10px}
+.step-n{width:40px;height:40px;background:#e8590c;color:#fff;display:flex;align-items:center;justify-content:center;font-family:Unbounded,sans-serif;font-size:16px}
+.step-t{font-size:18px;font-weight:600;line-height:1.3}
+.step-x{font-size:15px;line-height:1.55;color:#4a554f}
+
+.cta{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:clamp(28px,4vw,72px);align-items:start}
+.cta h2{margin-bottom:18px}
+.cta .lead{font-size:17px;margin-bottom:32px;max-width:46ch}
+.c-rows{display:flex;flex-direction:column;border-top:1px solid #d8d3c4}
+.c-row{display:grid;grid-template-columns:minmax(0,140px) minmax(0,1fr);gap:4px 20px;padding:16px 0;border-bottom:1px solid #d8d3c4;font-size:15px;line-height:1.5}
+.c-row>span{color:#6b746f;font-size:13px;padding-top:2px}
+.c-tel{font-family:Unbounded,sans-serif;font-size:clamp(22px,2.4vw,30px);white-space:nowrap;display:inline-flex;align-items:center;min-height:44px}
+.c-row a[href^=mailto]{display:inline-flex;align-items:center;min-height:44px}
+.c-msg{display:flex;flex-wrap:wrap;gap:8px}
+.c-msg a{display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 16px;border:1.5px solid #16201b;font-weight:600;font-size:14px}
+.c-msg a:hover{background:#16201b;color:#fff}
+.card{background:#fff;border:1px solid #d8d3c4;padding:clamp(22px,3vw,36px)}
+.card h3{font-size:24px;margin-bottom:6px}
+.card .sub{font-size:15px;color:#4a554f;margin-bottom:6px;line-height:1.5}
+
+footer{background:#16201b;color:#8b968f;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px 24px;padding-top:24px;padding-bottom:24px;font-size:13px}
+footer a{color:#d9ddd8}
+
+.mbar{display:none}
+@media (max-width:1180px){
+  .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;background:#16201b;padding:8px 8px calc(8px + env(safe-area-inset-bottom));gap:8px}
+  .mbar a,.mbar button{flex:1;display:flex;align-items:center;justify-content:center;gap:7px;height:48px;color:#fff;font:inherit;font-size:15px;font-weight:600;border:1px solid #3b4a42;background:none}
+  .mbar .mb-call{background:#e8590c;border-color:#e8590c}
+  .mbar .mb-sel{display:none;justify-content:space-between;padding:0 16px;background:#e8590c;border-color:#e8590c}
+  .mbar.has .mb-sel{display:flex}
+  .mbar.has .mb-d{display:none}
+  body{padding-bottom:68px}
+}
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <a class="logo" href="#top">
+    <span class="logo-mark"><i></i><i></i><i></i><i></i></span>
+    <span class="logo-t"><b>ИП Калашников А.А.</b><span>Продажа участков промназначения</span></span>
+  </a>
+  <nav>
+    <a href="#top">Карта участков</a>
+    <a href="#price">Цены и скидки</a>
+    <a href="#photos">Фото</a>
+    <a href="#about">Характеристики</a>
+    <a href="#contact">Контакты</a>
+  </nav>
+  <div class="h-act">
+    <a class="hm js-tg" href="#" target="_blank" rel="noopener" data-goal="tg_click">Telegram</a>
+    <a class="hm js-max" href="#" target="_blank" rel="noopener" data-goal="max_click">MAX</a>
+    <button class="hreq js-req" type="button">Оставить заявку</button>
+    <a class="htel" href="tel:+79276880731" data-goal="phone_click"><svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg><span>+7 927 688-07-31</span></a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <aside class="panel" id="panel">
+    <div class="p-top">
+      <div class="kicker">14 участков в продаже</div>
+      <h1>Земля под производство и склад. <em>Выберите участок на карте</em></h1>
+      <p class="lead">От 25 до 98 соток в п. Верхняя Подстепновка, Самарская область. Газ, свет до 630 кВА, асфальт и КПП уже на месте. Продаёт собственник, без комиссий.</p>
+    </div>
+    <div class="p-sel">
+      <div class="ps-h"><b>Ваш расчёт</b><button class="ps-clear js-clear" type="button" hidden>Сбросить</button></div>
+      <div class="ps-empty js-empty"><i></i><span>Нажмите на зелёный участок, чтобы добавить его в расчёт. Чем больше площадь, тем больше скидка: до 10,8%.</span></div>
+      <div class="js-sel" hidden>
+        <div class="chips js-chips"></div>
+        <div class="tot"><div class="tot-sum js-sum"></div><div class="tot-old js-old"></div></div>
+        <div class="tot-meta js-meta"></div>
+        <div class="bar"><div class="bar-f js-bar"></div><div class="bar-t" style="left:13.38%"></div><div class="bar-t" style="left:26.49%"></div><div class="bar-t" style="left:66.23%"></div></div>
+        <div class="bar-l"><span style="left:13.38%">−5%</span><span style="left:26.49%">−8%</span><span style="left:66.23%">−10,8%</span></div>
+        <div class="bar-hint js-hint"></div>
+      </div>
+    </div>
+    <div class="p-form">
+      <form class="js-form js-main-form" novalidate>
+        <div class="fields">
+          <label class="ff">Телефон, пришлём документы и точный расчёт
+            <input type="tel" name="phone" placeholder="+7 ___ ___-__-__" autocomplete="tel" inputmode="tel" />
+          </label>
+          <div class="seg">
+            <input type="radio" name="channel" value="Telegram" id="c1a" checked /><label for="c1a">Telegram</label>
+            <input class="js-ch-max" type="radio" name="channel" value="MAX" id="c1b" /><label class="js-ch-max" for="c1b">MAX</label>
+            <input type="radio" name="channel" value="Звонок" id="c1c" /><label for="c1c">Звонок</label>
+          </div>
+          <input type="hidden" name="lot" class="js-lot" value="Общий запрос: презентация всего массива" />
+          <button class="btn btn-o js-main-btn" type="submit">Получить презентацию участков</button>
+          <label class="consent"><input type="checkbox" name="agree" checked /><span>Согласен на обработку персональных данных по <a href="politika.html" target="_blank">политике</a></span></label>
+          <div class="form-msg js-msg" role="status"></div>
+        </div>
+        <div class="done">
+          <h3>Заявка принята</h3>
+          <p>Пришлём документы и расчёт в течение рабочего дня. Срочно: <a href="tel:+79276880731" style="text-decoration:underline">+7 927 688-07-31</a></p>
+        </div>
+      </form>
+    </div>
+  </aside>
+
+  <div class="map" id="map">
+    <div class="map-top">
+      <div class="views" role="tablist"><button type="button" class="on js-view" data-v="map">Карта</button><button type="button" class="js-view" data-v="list">Списком</button></div>
+      <div class="legend"><span><i></i>Свободен</span><span><i class="s"></i>Выбран</span><span><i class="r"></i>Не продаётся</span><span><i class="x"></i>Продан</span></div>
+    </div>
+    <div class="map-svg"><svg class="js-svg" role="group" aria-label="Схема участков"></svg></div>
+    <div class="list js-list" hidden></div>
+    <div class="map-hint js-mhint">Нажмите на участок, чтобы добавить его в расчёт</div>
+    <div class="tip js-tip"></div>
+  </div>
+</section>
+
+<div class="facts">
+  <div class="fact"><b>Газ</b><span>по границе участков</span></div>
+  <div class="fact"><b>до 630 кВА</b><span>мощность под производство</span></div>
+  <div class="fact"><b>Асфальт</b><span>подъезд по всему массиву</span></div>
+  <div class="fact"><b>Забор и КПП</b><span>территория под контролем</span></div>
+  <div class="fact"><b>Зона П1</b><span>производство, склад, логистика</span></div>
+</div>
+
+<section class="sec wrap" id="price">
+  <div class="sh">
+    <div><div class="eb">Цены и скидки</div><h2>Берёте больше, платите меньше за каждую сотку</h2></div>
+    <p>Скидка считается от общей площади покупки. Объедините соседние участки под свой проект и сэкономьте до 10,8%.</p>
+  </div>
+  <div class="tiers">
+    <div class="tier base"><div class="tier-l">Базовая цена</div><div class="tier-p">250 000 ₽</div><div class="tier-x">за сотку. №308 на 1-й линии: 300 000 ₽ за сотку</div></div>
+    <div class="tier"><div class="tier-l">От 101 сотки</div><div class="tier-p">−5%</div><div class="tier-x">2-3 соседних участка</div></div>
+    <div class="tier"><div class="tier-l">От 200 соток</div><div class="tier-p">−8%</div><div class="tier-x">4 участка и больше</div></div>
+    <div class="tier top"><div class="tier-l">От 500 соток</div><div class="tier-p">−10,8%</div><div class="tier-x">от 5 га, 10 участков и больше</div></div>
+  </div>
+  <div class="example">
+    <p>Пример: <b>№314 + №320 + №321</b>, 156 соток подряд. Без скидки 39,04 млн ₽, со скидкой 5%:</p>
+    <div class="example-sum">37,09 млн ₽</div>
+  </div>
+  <p class="fine">Стоимость права пользования сервитутом в расчёт не входит. Возможна аренда без выкупа, условия по запросу.</p>
+</section>
+
+<section class="sec wrap" id="photos" style="padding-top:0">
+  <div class="sh">
+    <div><div class="eb">Фото площадки</div><h2>Территория готова к стройке</h2></div>
+    <p>Площадки спланированы и отсыпаны щебнем, въезд через КПП. Покажем участки на месте в удобное для вас время.</p>
+  </div>
+  <div class="photos">
+    <figure class="ph ph-1"><img loading="lazy" src="satellite.jpg" alt="Спутниковый снимок массива" /><figcaption>Массив на спутниковом снимке (карты Yandex)</figcaption></figure>
+    <figure class="ph ph-2"><img loading="lazy" src="photo-gate.jpg" alt="Въезд на территорию, КПП" /><figcaption>Въезд и КПП</figcaption></figure>
+    <figure class="ph ph-3"><img loading="lazy" src="photo-pad.jpg" alt="Площадка со щебёночным покрытием" /><figcaption>Площадка, щебень</figcaption></figure>
+    <figure class="ph ph-4"><img loading="lazy" src="photo-layout.jpg" alt="Планировка площадки" /><figcaption>Планировка</figcaption></figure>
+    <figure class="ph ph-5"><img loading="lazy" src="photo-stand.jpg" alt="Информационный стенд" /><figcaption>Стенд на площадке</figcaption></figure>
+  </div>
+</section>
+
+<section class="sec wrap dark" id="about">
+  <div class="sh">
+    <div><div class="eb">Назначение</div><h2>Документы в порядке, назначение под ваш бизнес</h2></div>
+    <p>Производственная зона П1 по карте градостроительного зонирования. Межевание завершено, у каждого участка свой кадастровый номер.</p>
+  </div>
+  <div class="uses">
+    <div class="use"><span class="use-n">01</span><span class="use-t">Производство</span><span class="use-x">Газ и до 630 кВА для цехов и оборудования.</span></div>
+    <div class="use"><span class="use-n">02</span><span class="use-t">Склад</span><span class="use-x">Асфальтированный подъезд для грузового транспорта.</span></div>
+    <div class="use"><span class="use-n">03</span><span class="use-t">Логистика</span><span class="use-x">До 7,55 га единым массивом под терминал или базу.</span></div>
+  </div>
+  <div class="specs">
+    <div class="sp"><span class="sp-l">Расположение</span><span class="sp-v">п. Верхняя Подстепновка, Волжский район, Самарская область</span></div>
+    <div class="sp"><span class="sp-l">Кадастровый квартал</span><span class="sp-v">63:17:0514001</span></div>
+    <div class="sp"><span class="sp-l">Категория земель</span><span class="sp-v">Земли промышленности, энергетики, транспорта, связи и иного специального назначения</span></div>
+    <div class="sp"><span class="sp-l">ВРИ</span><span class="sp-v">Для строительства производственной базы</span></div>
+    <div class="sp"><span class="sp-l">В продаже</span><span class="sp-v">14 участков, 75 508 м² (7,55 га)</span></div>
+    <div class="sp"><span class="sp-l">Собственность</span><span class="sp-v">Частная, сделка напрямую с собственником</span></div>
+  </div>
+</section>
+
+<section class="sec wrap">
+  <div class="sh"><div><div class="eb">Как купить</div><h2>От заявки до сделки</h2></div></div>
+  <div class="steps">
+    <div class="step"><span class="step-n">1</span><span class="step-t">Выберите участки</span><span class="step-x">На карте или по телефону, подберём под вашу задачу.</span></div>
+    <div class="step"><span class="step-n">2</span><span class="step-t">Получите документы</span><span class="step-x">Выписки ЕГРН, схема, техусловия и расчёт со скидкой в мессенджер.</span></div>
+    <div class="step"><span class="step-n">3</span><span class="step-t">Посмотрите на месте</span><span class="step-x">Покажем участки, сети и подъезд.</span></div>
+    <div class="step"><span class="step-n">4</span><span class="step-t">Сделка</span><span class="step-x">Договор напрямую с собственником, без посредников.</span></div>
+  </div>
+</section>
+
+<section class="sec wrap" id="contact" style="padding-top:0">
+  <div class="cta">
+    <div>
+      <div class="eb">Контакты</div>
+      <h2>Покажем участок и пришлём документы</h2>
+      <p class="lead">Позвоните или напишите: ответим на вопросы и согласуем выезд на место.</p>
+      <div class="c-rows">
+        <div class="c-row"><span>Телефон</span><a class="c-tel" href="tel:+79276880731" data-goal="phone_click">+7 927 688-07-31</a></div>
+        <div class="c-row"><span>Мессенджеры</span><div class="c-msg"><a class="js-tg" href="#" target="_blank" rel="noopener" data-goal="tg_click">Telegram</a><a class="js-max" href="#" target="_blank" rel="noopener" data-goal="max_click">MAX</a></div></div>
+        <div class="c-row"><span>Почта</span><a href="mailto:sm3@ak74.pro" style="text-decoration:underline">sm3@ak74.pro</a></div>
+        <div class="c-row"><span>Адрес</span><span style="color:#16201b;font-size:15px;padding:0">Самарская обл., м.р-н Волжский, с.п. Верхняя Подстепновка, п. Верхняя Подстепновка, территория Промышленная</span></div>
+      </div>
+    </div>
+    <form class="card js-form" id="lead" novalidate>
+      <div class="fields">
+        <h3>Оставить заявку</h3>
+        <p class="sub">Ответим в течение рабочего дня.</p>
+        <label class="ff">Имя<input type="text" name="name" placeholder="Как к вам обращаться" autocomplete="name" /></label>
+        <label class="ff">Телефон<input type="tel" name="phone" placeholder="+7 ___ ___-__-__" autocomplete="tel" inputmode="tel" /></label>
+        <label class="ff">Интересует
+          <select name="lot" class="js-lot-select">
+            <option>Один участок ~50 соток</option>
+            <option>Несколько участков со скидкой</option>
+            <option>№308, 1-я линия, 9 797 м²</option>
+            <option>№313, 1-я линия, 2 500 м²</option>
+            <option>Весь массив 7,55 га</option>
+            <option>Аренда без выкупа</option>
+          </select>
+        </label>
+        <div class="ff">Как связаться
+          <div class="seg">
+            <input type="radio" name="channel" value="Telegram" id="c2a" checked /><label for="c2a">Telegram</label>
+            <input class="js-ch-max" type="radio" name="channel" value="MAX" id="c2b" /><label class="js-ch-max" for="c2b">MAX</label>
+            <input type="radio" name="channel" value="Звонок" id="c2c" /><label for="c2c">Звонок</label>
+          </div>
+        </div>
+        <label class="consent"><input type="checkbox" name="agree" checked /><span>Согласен на обработку персональных данных по <a href="politika.html" target="_blank">политике конфиденциальности</a></span></label>
+        <button class="btn btn-d" type="submit">Получить документы</button>
+        <div class="form-msg js-msg" role="status"></div>
+      </div>
+      <div class="done">
+        <h3>Заявка принята</h3>
+        <p>Свяжемся в течение рабочего дня. Срочно: <a href="tel:+79276880731" style="text-decoration:underline">+7 927 688-07-31</a></p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer class="wrap">
+  <span>ИП Калашников А.А.</span>
+  <a href="politika.html">Политика конфиденциальности</a>
+  <a href="tel:+79276880731">+7 927 688-07-31</a>
+</footer>
+
+<div class="mbar js-mbar">
+  <a class="mb-d mb-call" href="tel:+79276880731" data-goal="phone_click">Позвонить</a>
+  <button class="mb-d js-req" type="button" style="background:#f3f1ea;color:#16201b;border-color:#f3f1ea">Заявка</button>
+  <a class="mb-d js-tg" href="#" target="_blank" rel="noopener" data-goal="tg_click" style="flex:.6">TG</a>
+  <a class="mb-d js-max" href="#" target="_blank" rel="noopener" data-goal="max_click" style="flex:.6">MAX</a>
+  <button class="mb-sel js-mb-sel" type="button"><span class="js-mb-t"></span><span>Оформить →</span></button>
+</div>
+
+<dialog class="rq js-rq">
+  <form class="card js-form" novalidate>
+    <button class="mx-x js-rq-close" type="button" aria-label="Закрыть">×</button>
+    <div class="fields">
+      <h3>Оставить заявку</h3>
+      <p class="sub">Перезвоним или напишем в течение рабочего дня.</p>
+      <label class="ff">Имя<input type="text" name="name" placeholder="Как к вам обращаться" autocomplete="name" /></label>
+      <label class="ff">Телефон<input type="tel" name="phone" placeholder="+7 ___ ___-__-__" autocomplete="tel" inputmode="tel" /></label>
+      <label class="ff">Что интересует<input type="text" name="lot" class="js-rq-lot" placeholder="Например: 1 га под склад" /></label>
+      <div class="ff">Как связаться
+        <div class="seg">
+          <input type="radio" name="channel" value="Звонок" id="c3c" checked /><label for="c3c">Звонок</label>
+          <input type="radio" name="channel" value="Telegram" id="c3a" /><label for="c3a">Telegram</label>
+          <input type="radio" name="channel" value="MAX" id="c3b" /><label for="c3b">MAX</label>
+        </div>
+      </div>
+      <label class="consent"><input type="checkbox" name="agree" checked /><span>Согласен на обработку персональных данных по <a href="politika.html" target="_blank">политике конфиденциальности</a></span></label>
+      <button class="btn btn-o" type="submit">Отправить заявку</button>
+      <div class="form-msg js-msg" role="status"></div>
+      <a href="tel:+79276880731" data-goal="phone_click" style="text-align:center;font-size:15px;padding:6px 0">или позвоните: <b>+7 927 688-07-31</b></a>
+    </div>
+    <div class="done">
+      <h3>Заявка принята</h3>
+      <p>Свяжемся в течение рабочего дня. Срочно: <a href="tel:+79276880731" style="text-decoration:underline">+7 927 688-07-31</a></p>
+    </div>
+  </form>
+</dialog>
+
+<dialog class="mx js-mx">
+  <div class="mx-in">
+    <button class="mx-x js-mx-close" type="button" aria-label="Закрыть">×</button>
+    <h3>Написать в MAX</h3>
+    <p>Найдите нас в MAX по номеру телефона - откройте приложение, нажмите «Новый чат» и введите номер:</p>
+    <div class="mx-tel">+7 927 688-07-31</div>
+    <div class="mx-row">
+      <button class="btn btn-d js-mx-copy" type="button" style="min-height:48px;font-size:15px">Скопировать</button>
+      <a class="btn btn-o" href="https://max.ru/" target="_blank" rel="noopener" style="min-height:48px;font-size:15px">Открыть MAX</a>
+    </div>
+  </div>
+</dialog>
+
+<script src="app.js"></script>
+</body>
+</html>
